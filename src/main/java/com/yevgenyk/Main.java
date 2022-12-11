@@ -6,6 +6,13 @@ import java.util.Properties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+/**
+ * Main class template.
+ *
+ * @author Yevgeny Kuznetsov
+ * @since 1.0.0, 19 August 2019
+ **/
+
 public final class Main {
 
     public static final String PROPERTIES_FILE = "temp.properties";
