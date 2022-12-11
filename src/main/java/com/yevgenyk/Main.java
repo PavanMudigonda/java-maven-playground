@@ -6,12 +6,6 @@ import java.util.Properties;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-/**
- * Main class template.
- *
- * @author Yevgeny Kuznetsov
- * @since 1.0.0, 19 August 2019
- **/
 public final class Main {
 
     public static final String PROPERTIES_FILE = "temp.properties";
@@ -22,12 +16,7 @@ public final class Main {
         properties.forEach((k, v) -> LOG.info(k + "=" + v));
     }
 
-    /**
-     * Loads properties from provided file.
-     *
-     * @param fileName The file to load the properties from
-     * @return The loaded properties
-     */
+
     public static Properties loadPropertiesFromFile(final String fileName) {
         final Properties properties = new Properties();
 
