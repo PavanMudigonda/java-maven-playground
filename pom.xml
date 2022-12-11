@@ -50,13 +50,13 @@
     <dependency>
       <groupId>ch.qos.logback</groupId>
       <artifactId>logback-classic</artifactId>
-      <version>1.2.11</version>
+      <version>1.4.5</version>
     </dependency>
     <!-- Testing -->
     <dependency>
       <groupId>org.junit.jupiter</groupId>
       <artifactId>junit-jupiter</artifactId>
-      <version>5.8.2</version>
+      <version>5.9.1</version>
       <scope>test</scope>
     </dependency>
     <dependency>
@@ -115,7 +115,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-help-plugin</artifactId>
-        <version>3.2.0</version>
+        <version>3.3.0</version>
         <executions>
           <execution>
             <id>show-profiles</id>
@@ -155,7 +155,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-shade-plugin</artifactId>
-        <version>3.3.0</version>
+        <version>3.4.1</version>
         <executions>
           <!-- Attach the shade into the package phase -->
           <execution>
@@ -178,12 +178,12 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-checkstyle-plugin</artifactId>
-        <version>3.1.2</version>
+        <version>3.2.0</version>
         <dependencies>
           <dependency>
             <groupId>com.puppycrawl.tools</groupId>
             <artifactId>checkstyle</artifactId>
-            <version>9.3</version>
+            <version>10.5.0</version>
           </dependency>
         </dependencies>
         <configuration>
@@ -207,7 +207,7 @@
       <plugin>
         <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-pmd-plugin</artifactId>
-        <version>3.17.0</version>
+        <version>3.19.0</version>
         <configuration>
           <rulesets>
             <ruleset>tools/pmd-ruleset.xml</ruleset>
@@ -231,7 +231,7 @@
       <plugin>
         <groupId>com.github.spotbugs</groupId>
         <artifactId>spotbugs-maven-plugin</artifactId>
-        <version>4.7.0.0</version>
+        <version>4.7.3.0</version>
         <configuration>
           <includeTests>true</includeTests>
           <effort>max</effort>
