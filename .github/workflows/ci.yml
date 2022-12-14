@@ -1,15 +1,15 @@
 name: All JDKs on all OSs
 
-on: [push, pull_request]
+on: [workflow_dispatch,pull_request]
 
 jobs:
   build:
+    runs-on: ubuntu-latest
     strategy:
       fail-fast: false
       matrix:
-        java_version: [11, 16, 17]
-        os: [windows-latest, macOS-latest, ubuntu-latest]
-    runs-on: ${{ matrix.os }}
+        java_version: [16]
+        os: [ubuntu-latest]
 
     steps:
       - name: Checkout
@@ -22,5 +22,12 @@ jobs:
           cache: 'maven'
       - name: Build with Maven
         run: mvn -B install --file pom.xml
+      - name: Publish test coverage results
+        uses: PavanMudigonda/jacoco-reporter@v4.8
+        with:
+          coverage_results_path: 'target/site/jacoco/jacoco.xml'
+          coverage_report_title: 'Test coverage results'
+          coverage_report_name: 'Test coverage results'
+          github_token: ${{ secrets.GITHUB_TOKEN }}
       - name: Report code coverage to codecov
         uses: codecov/codecov-action@v3

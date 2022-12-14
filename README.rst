@@ -14,6 +14,8 @@ Java, maven based playground starter project.
 Features
 ========
 
+test comment 
+
 This starter includes:
 
 * **Logback** - Console and rotating file logging - see `logback.xml`_
