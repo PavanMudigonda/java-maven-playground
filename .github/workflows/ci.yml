@@ -34,3 +34,12 @@ jobs:
           coverage_report_title: 'Test coverage results'
           coverage_report_name: 'Test coverage results'
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          
+      # uploads the coverage-report.md artifact  # Optional
+
+      - name: Upload Code Coverage Artifacts
+        uses: actions/upload-artifact@v2
+        with:
+          name: code-coverage-report-markdown
+          path: '*/coverage-results.md'
+          retention-days: 1  
