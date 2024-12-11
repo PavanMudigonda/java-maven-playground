@@ -27,6 +27,7 @@ public final class Main {
      *
      * @param fileName The file to load the properties from
      * @return The loaded properties
+     *
      */
     public static Properties loadPropertiesFromFile(final String fileName) {
         final Properties properties = new Properties();
